@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Model Results</h1>
+
+    {% if mse is not none %}
+        <p>Mean Squared Error: {{ mse }}</p>
+    {% elif error %}
+        <p>{{ error }}</p>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">Go Back</a>
+</body>
+</html>

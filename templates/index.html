@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Columns</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Select Columns to View Top 5 Values</h1>
+    <form action="{{ url_for('result') }}" method="POST">
+        <!-- Formatted Date -->
+        <div>
+            <input type="checkbox" id="Formatted Date" name="columns" value="Formatted Date">
+            <label for="Formatted Date">Formatted Date</label>
+        </div>
+
+        <!-- Summary -->
+        <div>
+            <input type="checkbox" id="Summary" name="columns" value="Summary">
+            <label for="Summary">Summary</label>
+        </div>
+
+        <!-- Precip Type -->
+        <div>
+            <input type="checkbox" id="Precip Type" name="columns" value="Precip Type">
+            <label for="Precip Type">Precip Type</label>
+        </div>
+
+        <!-- Temperature (C) -->
+        <div>
+            <input type="checkbox" id="Temperature (C)" name="columns" value="Temperature (C)">
+            <label for="Temperature (C)">Temperature (C)</label>
+        </div>
+
+        <!-- Apparent Temperature (C) -->
+        <div>
+            <input type="checkbox" id="Apparent Temperature (C)" name="columns" value="Apparent Temperature (C)">
+            <label for="Apparent Temperature (C)">Apparent Temperature (C)</label>
+        </div>
+
+        <!-- Humidity -->
+        <div>
+            <input type="checkbox" id="Humidity" name="columns" value="Humidity">
+            <label for="Humidity">Humidity</label>
+        </div>
+
+        <!-- Wind Speed (km/h) -->
+        <div>
+            <input type="checkbox" id="Wind Speed (km/h)" name="columns" value="Wind Speed (km/h)">
+            <label for="Wind Speed (km/h)">Wind Speed (km/h)</label>
+        </div>
+
+        <!-- Wind Bearing (degrees) -->
+        <div>
+            <input type="checkbox" id="Wind Bearing (degrees)" name="columns" value="Wind Bearing (degrees)">
+            <label for="Wind Bearing (degrees)">Wind Bearing (degrees)</label>
+        </div>
+
+        <!-- Visibility (km) -->
+        <div>
+            <input type="checkbox" id="Visibility (km)" name="columns" value="Visibility (km)">
+            <label for="Visibility (km)">Visibility (km)</label>
+        </div>
+
+        <!-- Loud Cover -->
+        <div>
+            <input type="checkbox" id="Loud Cover" name="columns" value="Loud Cover">
+            <label for="Loud Cover">Loud Cover</label>
+        </div>
+
+        <!-- Pressure (millibars) -->
+        <div>
+            <input type="checkbox" id="Pressure (millibars)" name="columns" value="Pressure (millibars)">
+            <label for="Pressure (millibars)">Pressure (millibars)</label>
+        </div>
+
+        <!-- Daily Summary -->
+        <div>
+            <input type="checkbox" id="Daily Summary" name="columns" value="Daily Summary">
+            <label for="Daily Summary">Daily Summary</label>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
